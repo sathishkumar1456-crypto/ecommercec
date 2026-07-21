@@ -44,7 +44,7 @@ export const createProductAdmin = async (req, res, next) => {
       name: name || 'Placeholder Blueprint',
       price: price || 0,
       description: description || 'Operational outline definition',
-      imageUrl: image || 'https://via.placeholder.com/300',
+      image: image || 'https://via.placeholder.com/300',
       category: category || 'General Utilities',
       stock: countInStock || 0,
     });
@@ -63,7 +63,7 @@ export const updateProductAdmin = async (req, res, next) => {
       product.name = name || product.name;
       product.price = price !== undefined ? price : product.price;
       product.description = description || product.description;
-      product.imageUrl = image || product.imageUrl;
+      product.image = image || product.image;
       product.category = category || product.category;
       product.stock = countInStock !== undefined ? countInStock : product.stock;
 
